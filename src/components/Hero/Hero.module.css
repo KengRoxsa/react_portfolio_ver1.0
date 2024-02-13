@@ -1,0 +1,80 @@
+.hero_wrapper{
+    overflow: hidden;
+    height: 500px;
+
+    & .container{
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+    & .hero_con{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 115px;
+        align-items: center;
+
+        & .text_1{
+            font-size: 32px;
+        }
+        & .text_2{
+            font-size: 64px;
+            font-weight: bold;
+            color: rgb(65, 75, 129);
+        }
+        & .text_3{
+            font-size: 32px;
+        }
+        & .styles.text_35{
+            font-size: 16;
+            margin-top: 10px;
+        }
+        & .text_4{
+            margin-top: 25px;
+            font-size: 14px;
+        }
+        & .hero_social{
+            display: flex;
+            justify-content: left;
+            list-style: none;
+
+            & li{
+                margin-top: 20px;
+                margin-right: 20px;
+                & svg{
+                    height: 32px;
+                width: 32px;
+                color: rgb(29, 28, 28);
+                }
+            }
+        }
+        & .hero_ig{
+            width: 300px;
+            height: 300px;
+            border-radius: 100%;
+            background-image: url("src/components/Testimonial/juri.png");
+            /* สองอันล่างนี้ใช้จัดตำแหน่งวางกรอบในรูป ไม่ใช่วางตำแหน่งภาพในจอนะ */
+            background-size: cover;
+            background-position: 50% 50%;
+            margin-right: 120px;
+        }
+    }
+}
+
+@media screen and (max-width:480px) {
+    .hero_wrapper{
+        height: auto;
+
+        & .hero_con{
+            flex-direction: column;
+            margin: 50px 0;
+            padding: 20px;
+
+            & .hero_ig, &.hero_social {
+                    width: 300px;
+                    align-items: center;
+                    margin-top: 20px;
+                    justify-content: center;
+            }
+        }
+    }
+    
+}
